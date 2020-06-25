@@ -332,6 +332,40 @@ template {
 [hidden] {
   display: none; }
 
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .section__title {
+    font-family: "Raleway Bold", sans-serif;
+    font-size: 2rem;
+    line-height: 2.33rem;
+    color: #4DB0E4;
+    text-align: center; }
+  .section__subtitle {
+    font-family: "Raleway Regular", sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.83rem;
+    text-align: center; }
+  .section__text {
+    font-family: "Roboto Light", sans-serif;
+    line-height: 1.55rem; }
+
+.li {
+  list-style-type: none;
+  position: relative; }
+  .li_check::before {
+    content: url("../img/check.svg");
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -18.5px; }
+  .li_circle::before {
+    content: url("../img/circle.svg");
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -18.5px; }
+
 .container {
   width: 67%;
   margin: auto; }
@@ -345,7 +379,7 @@ template {
   flex-basis: 33%; }
 
 .col-50 {
-  width: 50%; }
+  width: 48%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -365,9 +399,6 @@ a {
 img {
   max-width: 100%; }
 
-li {
-  list-style-type: none; }
-
 *:active, *:hover, *:focus {
   outline: 0;
   outline-offset: 0; }
@@ -375,9 +406,12 @@ li {
 ::-moz-placeholder, :-moz-placeholder {
   opacity: 1; }
 
+.img_drop {
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.03); }
+
 .header {
-  padding-top: 3.8rem;
-  padding-bottom: 3.8rem; }
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; }
   .header__container {
     display: flex;
     justify-content: space-between;
@@ -432,7 +466,8 @@ li {
   width: 600px;
   transform: translateX(-100%);
   transition: transform .3s .3s;
-  display: none; }
+  display: none;
+  z-index: 100; }
   .navigation-menu::before {
     background: #4DB0E4;
     content: '';
@@ -521,6 +556,45 @@ li {
     width: 80%; }
     .navigation-menu::before {
       transform: translate(-50%, -50%) rotate(45deg); } }
+
+.hero {
+  background: #FAFAFA; }
+  .hero__col-50 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35rem; }
+  .hero__img {
+    width: 28.33rem;
+    height: 35rem;
+    vertical-align: center; }
+  .hero__title {
+    text-align: left;
+    margin: 0;
+    width: 30rem; }
+  .hero__li {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 1.33rem;
+    line-height: 1.55rem;
+    color: #6F6F6F;
+    margin-bottom: 1rem;
+    z-index: 8; }
+  .hero__link {
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 1.33rem;
+    line-height: 1.55rem;
+    text-align: center;
+    color: #FAFAFA;
+    background: #FFAE4D;
+    padding: 1rem 3rem;
+    border: 3px solid #FFAE4D;
+    border-radius: 50px;
+    transition: 0.5s;
+    max-width: 22rem; }
+    .hero__link:hover {
+      cursor: pointer;
+      color: #FFAE4D;
+      background: #FAFAFA; }
 
 .modal {
   opacity: 0;
@@ -651,29 +725,52 @@ li {
     margin-bottom: 2.428rem; }
 
 @media screen and (max-width: 1450px) {
-  html {
-    font-size: 18px; } }
+  .container {
+    width: 95%; } }
 
 @media screen and (max-width: 1250px) {
   html {
     font-size: 18px; } }
 
 @media screen and (max-width: 994px) {
+  html {
+    font-size: 14px; }
   .navigation-menu {
     display: table; }
-  .header__nav {
+  .section {
+    padding-top: 2.85rem;
+    padding-bottom: 2.85rem; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .col-50 {
+    flex-basis: 100%; }
+  .header {
+    padding-left: 5rem; }
+    .header__nav {
+      display: none; }
+  .hero__img {
     display: none; }
-  html {
-    font-size: 18px; } }
+  .hero__col-50 {
+    width: 100%;
+    align-items: center; }
+  .hero__title {
+    text-align: center;
+    width: 100%; } }
 
 @media screen and (max-width: 760px) {
-  html {
-    font-size: 18px; } }
+  .header__container {
+    width: 85%; } }
 
 @media screen and (max-width: 570px) {
-  html {
-    font-size: 18px; } }
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .header__container {
+      justify-content: flex-end; }
+    .header__logo {
+      display: none; } }
 
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 450px) {
   html {
-    font-size: 18px; } }
+    font-size: 14px; } }

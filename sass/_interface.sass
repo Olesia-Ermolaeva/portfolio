@@ -1,0 +1,35 @@
+.section
+  padding-top: 5rem
+  padding-bottom: 5rem
+  &__title
+    font-family: $font-title
+    font-size: 2rem
+    line-height: 2.33rem
+    color: $secondary
+    text-align: center
+  &__subtitle
+    font-family: $font-title-thin
+    font-size: 1.55rem
+    line-height: 1.83rem
+    text-align: center
+  &__text
+    font-family: $font-text
+    line-height: 1.55rem
+
+.li
+  list-style-type: none
+  position: relative
+  &_check
+    &::before
+      content: url('../img/check.svg')
+      position: absolute
+      top: 50%
+      left: -50px
+      margin-top: -18.5px
+  &_circle
+    &::before
+      content: url('../img/circle.svg')
+      position: absolute
+      top: 50%
+      left: -50px
+      margin-top: -18.5px

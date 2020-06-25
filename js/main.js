@@ -15,25 +15,6 @@ $(document).ready(function () {
     modalSuccess.toggleClass('modal__success--visible');
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
-
-  next.css('left', prev.width() + 35 + bullets.width() + 35)
-  bullets.css('left', prev.width() + 35)
 
   new WOW().init();
 
@@ -232,30 +213,8 @@ $(document).ready(function () {
     });
   })
 
-  function videoPlay(event) {
-    event.target.playVideo();
-  }
 });
 
-//загрузка карты
-YaMapsShown = false;
-$(document).ready(function (){
-  $(window).scroll(function() {
-    if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
-      showYaMaps();
-      YaMapsShown = true;
-     }
-    }
-  });
-});
-
-function showYaMaps(){
-  var script   = document.createElement("script");
-  script.type  = "text/javascript";
-  script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd34938594550b3ce2d66bcb5f2a1d7f673189f8678aa2a77ba2c843bf53da47&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
-  document.getElementById("YaMaps").appendChild(script);
-}
 
 // прокрутка якорных ссылок
 $("body").on('click', '[href*="#"]', function(e){
@@ -278,8 +237,18 @@ $("body").on('click', '[href*="#"]', function(e){
   });
 })(jQuery);
 
+var scrolled;
+window.onscroll = function() {
+    scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrolled > 450){
+        $('.js-nav-menu').css({"display": "table"})
+    }
+}
+
 ;(function() {
   // Initialize
   var bLazy = new Blazy();
 })();
+
+
 

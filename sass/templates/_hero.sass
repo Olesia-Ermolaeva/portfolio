@@ -1,0 +1,38 @@
+.hero
+  background: $light
+  &__col-50
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 35rem
+  &__img
+    width: 28.33rem
+    height: 35rem
+    vertical-align: center
+  &__title
+    text-align: left
+    margin: 0
+    width: 30rem
+  &__li
+    font-family: $font-text
+    font-size: 1.33rem
+    line-height: 1.55rem
+    color: $dark
+    margin-bottom: 1rem
+    z-index: 8
+  &__link
+    font-family: $font-button
+    font-size: 1.33rem
+    line-height: 1.55rem
+    text-align: center
+    color: $light
+    background: $primary
+    padding: 1rem 3rem
+    border: 3px solid $primary
+    border-radius: 50px
+    transition: 0.5s
+    max-width: 22rem
+    &:hover
+      cursor: pointer
+      color: $primary
+      background: $light

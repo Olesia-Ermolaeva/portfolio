@@ -1,23 +1,47 @@
 @media screen and ( max-width: 1450px )
-  html
-    font-size: 18px
+  .container
+    width: 95%
 @media screen and ( max-width: 1250px )
   html
     font-size: 18px
 @media screen and ( max-width: 994px )
+  html
+    font-size: 14px
   .navigation-menu
     display: table 
+  .section
+    padding-top: 2.85rem
+    padding-bottom: 2.85rem
+  .row
+    flex-direction: column
+    align-items: center
+  .col-50
+    flex-basis: 100%
   .header
+    padding-left: 5rem
     &__nav
       display: none
-  html
-    font-size: 18px
+  .hero
+    &__img
+      display: none
+    &__col-50
+      width: 100%
+      align-items: center
+    &__title
+      text-align: center
+      width: 100%
 @media screen and ( max-width: 760px )
-  html
-    font-size: 18px
+  .header
+    &__container
+      width: 85%
 @media screen and ( max-width: 570px )
+  .header
+    padding-top: 1rem
+    padding-bottom: 1rem
+    &__container
+      justify-content: flex-end
+    &__logo
+      display: none
+@media screen and ( max-height: 450px )
   html
-    font-size: 18px
-@media screen and ( max-height: 520px )
-  html
-    font-size: 18px
+    font-size: 14px
