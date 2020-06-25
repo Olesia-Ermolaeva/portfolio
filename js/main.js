@@ -221,6 +221,7 @@ $("body").on('click', '[href*="#"]', function(e){
   var fixed_offset = 100;
   $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
   e.preventDefault();
+  $('.js-nav-menu').removeClass('navigation-menu--open');
 });
 
 // бургер-меню
@@ -239,14 +240,20 @@ $("body").on('click', '[href*="#"]', function(e){
 
 // появление бургер-меню при скролле
 var scrolled;
+
 window.onscroll = function() {
+  if( window.innerWidth >= 995 ){
     scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if(scrolled > 50){
-        $(".js-nav-menu").css({"display": "table"})
+      $(".js-nav-menu").css({"display": "table"})
     }
     if(50 > scrolled){
         $(".js-nav-menu").css({"display": "none"})         
     }
+  } else {
+      $(".js-nav-menu").css({"display": "table"})
+  }
+    
 }
 
 ;(function() {

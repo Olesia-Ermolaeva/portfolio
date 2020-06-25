@@ -368,6 +368,17 @@ template {
     left: -50px;
     margin-top: -18.5px; }
 
+.upbutton {
+  display: none;
+  background: url("../img/up.svg") no-repeat top left;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 999; }
+
 .container {
   width: 67%;
   margin: auto; }
@@ -608,6 +619,7 @@ img {
   box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.03);
   border: none;
   padding: 2.22rem;
+  margin: 0 auto;
   margin-bottom: 1rem; }
   .avantage__card:hover {
     border-bottom: 5px solid #FFAE4D; }
@@ -765,12 +777,11 @@ img {
     font-size: 14px; }
   .navigation-menu {
     display: table; }
+  .menu-list__item__link {
+    font-size: 2rem; }
   .section {
     padding-top: 2.85rem;
     padding-bottom: 2.85rem; }
-  .row {
-    flex-direction: column;
-    align-items: center; }
   .col-50 {
     flex-basis: 100%; }
   .header {
@@ -779,6 +790,9 @@ img {
       display: none; }
   .hero__img {
     display: none; }
+  .hero__row {
+    flex-direction: column;
+    align-items: center; }
   .hero__col-50 {
     width: 100%;
     align-items: center; }
@@ -786,20 +800,32 @@ img {
     text-align: center;
     width: 100%; }
   .avantage__col-30 {
-    flex-basis: 48%; } }
+    flex-basis: 48%; }
+  .avantage__img {
+    width: 40px;
+    height: 40px; } }
 
 @media screen and (max-width: 760px) {
   .header__container {
     width: 85%; } }
 
 @media screen and (max-width: 570px) {
+  html {
+    font-size: 10px; }
+  .li_check::before {
+    left: -35px; }
+  .col-30 {
+    flex-basis: 100%; }
   .header {
     padding-top: 1rem;
     padding-bottom: 1rem; }
     .header__container {
       justify-content: flex-end; }
     .header__logo {
-      display: none; } }
+      display: none; }
+  .avantage__img {
+    width: 30px;
+    height: 30px; } }
 
 @media screen and (max-height: 450px) {
   html {
