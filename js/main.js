@@ -237,11 +237,15 @@ $("body").on('click', '[href*="#"]', function(e){
   });
 })(jQuery);
 
+// появление бургер-меню при скролле
 var scrolled;
 window.onscroll = function() {
     scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if(scrolled > 450){
-        $('.js-nav-menu').css({"display": "table"})
+    if(scrolled > 50){
+        $(".js-nav-menu").css({"display": "table"})
+    }
+    if(50 > scrolled){
+        $(".js-nav-menu").css({"display": "none"})         
     }
 }
 

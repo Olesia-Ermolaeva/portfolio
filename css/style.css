@@ -340,12 +340,14 @@ template {
     font-size: 2rem;
     line-height: 2.33rem;
     color: #4DB0E4;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 5.55rem; }
   .section__subtitle {
     font-family: "Raleway Regular", sans-serif;
     font-size: 1.55rem;
     line-height: 1.83rem;
-    text-align: center; }
+    text-align: center;
+    font-weight: normal; }
   .section__text {
     font-family: "Roboto Light", sans-serif;
     line-height: 1.55rem; }
@@ -596,6 +598,32 @@ img {
       color: #FFAE4D;
       background: #FAFAFA; }
 
+.avantage__row {
+  flex-wrap: wrap; }
+
+.avantage__card {
+  max-width: 22.5rem;
+  height: 22.5rem;
+  background: #FAFAFA;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.03);
+  border: none;
+  padding: 2.22rem;
+  margin-bottom: 1rem; }
+  .avantage__card:hover {
+    border-bottom: 5px solid #FFAE4D; }
+
+.avantage__img {
+  width: 60px;
+  height: 60px; }
+
+.avantage__subtitle {
+  flex-basis: 100%;
+  color: #4DB0E4;
+  text-align: left; }
+
+.avantage__text {
+  color: #6F6F6F; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -756,7 +784,9 @@ img {
     align-items: center; }
   .hero__title {
     text-align: center;
-    width: 100%; } }
+    width: 100%; }
+  .avantage__col-30 {
+    flex-basis: 48%; } }
 
 @media screen and (max-width: 760px) {
   .header__container {
