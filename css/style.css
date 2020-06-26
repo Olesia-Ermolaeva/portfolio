@@ -365,15 +365,15 @@ template {
     content: url("../img/circle.svg");
     position: absolute;
     top: 50%;
-    left: -50px;
-    margin-top: -18.5px; }
+    left: -30px;
+    margin-top: -9px; }
 
 .upbutton {
   display: none;
   background: url("../img/up.svg") no-repeat top left;
   height: 60px;
   width: 60px;
-  bottom: 30px;
+  bottom: 90px;
   right: 30px;
   cursor: pointer;
   position: fixed;
@@ -389,7 +389,7 @@ template {
   justify-content: space-around; }
 
 .col-30 {
-  flex-basis: 33%; }
+  flex-basis: 30%; }
 
 .col-50 {
   width: 48%; }
@@ -636,6 +636,55 @@ img {
 .avantage__text {
   color: #6F6F6F; }
 
+.price__text {
+  color: #6F6F6F;
+  text-align: center;
+  margin-bottom: 4rem; }
+
+.price__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FAFAFA;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.03);
+  padding: 40px;
+  max-width: 23rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem; }
+
+.price__subtitle {
+  color: #FFAE4D;
+  text-align: center;
+  -webkit-margin-before: 0;
+  margin-block-start: 0; }
+
+.price__li {
+  color: #6F6F6F;
+  text-align: left;
+  line-height: 1.55rem; }
+
+.price__tag {
+  color: #FFAE4D;
+  text-align: center;
+  font-size: 1.55rem;
+  margin-top: 2rem;
+  margin-bottom: 2.44rem; }
+
+.price__button {
+  border: 3px solid #FFAE4D;
+  background-color: #FFAE4D;
+  color: #FAFAFA;
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 1.33rem;
+  text-align: center;
+  padding: 1rem 4.08rem;
+  border-radius: 50px;
+  transition: 0.5s; }
+  .price__button:hover {
+    cursor: pointer;
+    color: #FFAE4D;
+    background: #FAFAFA; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -784,11 +833,9 @@ img {
 
 @media screen and (max-width: 1250px) {
   html {
-    font-size: 18px; } }
+    font-size: 14px; } }
 
 @media screen and (max-width: 994px) {
-  html {
-    font-size: 14px; }
   .navigation-menu {
     display: table; }
   .menu-list__item__link {
@@ -798,6 +845,18 @@ img {
     padding-bottom: 2.85rem; }
   .col-50 {
     flex-basis: 100%; }
+  .li_check::before {
+    content: url("../img/check-m.svg");
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -8px; }
+  .li_circle::before {
+    content: url("../img/circle-m.svg");
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    margin-top: -10px; }
   .header {
     padding-left: 5rem; }
     .header__nav {
@@ -817,7 +876,13 @@ img {
     flex-basis: 48%; }
   .avantage__img {
     width: 40px;
-    height: 40px; } }
+    height: 40px; }
+  .price__row {
+    flex-wrap: wrap; }
+  .price__col-30 {
+    flex-basis: 30%; }
+  .price__card {
+    padding: 20px; } }
 
 @media screen and (max-width: 760px) {
   .header__container {
