@@ -723,6 +723,20 @@ img {
     align-self: flex-end;
     padding: 1.6rem 4.4rem; }
 
+.footer {
+  padding: 2.3rem 0;
+  background-color: #000000; }
+  .footer__col-30 {
+    text-align: center;
+    color: rgba(250, 250, 250, 0.64);
+    font-size: 0.75rem; }
+  .footer__link {
+    color: rgba(250, 250, 250, 0.64);
+    transition: 0.2s; }
+    .footer__link:hover {
+      cursor: pointer;
+      color: #4DB0E4; }
+
 .modal__success {
   opacity: 0;
   visibility: hidden;
@@ -814,6 +828,8 @@ img {
     font-size: 10px; }
   .li_check::before {
     left: -35px; }
+  .row {
+    flex-wrap: wrap; }
   .col-30 {
     flex-basis: 100%; }
   .header {
