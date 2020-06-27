@@ -1,0 +1,75 @@
+.feedback
+  background: $secondary
+  position: relative
+  &__title
+    position: absolute
+    background: $light
+    padding: 3rem 20rem
+    width: 65%
+    text-align: center
+    left: 50%
+    transform: translate(-50%, -130%) 
+    box-shadow: $drop-lite
+  &__col-50
+    display: flex
+    flex-wrap: wrap
+  &__text
+    margin-top: 2rem
+    color: rgba($light, 0.65)
+    text-align: center
+    font-size: 1.33rem
+    line-height: 1.55rem
+  &__form
+    display: flex
+    flex-direction: column
+    width: 100%
+  &__input
+    background: transparent
+    border: none
+    border-bottom: 2px solid rgba($light, 0.65)
+    color: $light
+    font-size: 1.33rem
+    line-height: 1.55rem
+    &::placeholder
+      font-style: normal
+      font-weight: normal
+      font-size: 1.33rem
+      line-height: 1.55rem
+      color: rgba($light, 0.65)
+    &-group
+      display: flex
+      flex-direction: column 
+      position: relative
+      margin-top: 2rem
+  &__card
+    margin-top: 3rem
+    margin-left: 3rem
+  &__strong
+    font-family: $font-title
+    font-size: 1.55rem
+    line-height: 1.83rem
+    color: $primary
+  &__p
+    color: $light
+    line-height: 1.55rem
+  &__social, &__messengers
+    display: flex
+    align-items: center
+  &__link
+    margin-right: 1rem
+  &__button
+    align-self: center
+    margin-top: 3rem
+    font-size: 1rem
+    line-height: 1.16rem
+    padding: 0.6rem 4rem
+    &:hover
+      background: transparent
+
+
+ef
+  position: absolute
+  color: $primary
+  right: 0
+  bottom: 2px
+  font-size: 0.6rem
