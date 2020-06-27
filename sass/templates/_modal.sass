@@ -18,9 +18,9 @@
     visibility: visible
   &__dialog
     position: relative
-    max-width: 40rem
-    background: $dark url('../img/bg-lines.svg') no-repeat center / cover
-    padding: 2.49rem 3.8rem 1.928rem
+    max-width: 27rem
+    background: $secondary 
+    padding: 2.5rem
     color: $light
   &__close
     position: absolute
@@ -33,34 +33,75 @@
     margin: 0.9rem
     cursor: pointer
   &__title
-    font-family: 'Yeseva One', cursive
-    font-size: 1.5rem
+    font-family: $font-title-thin
+    font-size: 1.55rem
     font-style: normal
     font-weight: normal
-    line-height: 2.1rem
+    line-height: 1,83rem
     text-align: center
     margin: 0
+  &__text
+    margin-top: 1rem
+    color: rgba($light, 0.65)
+    text-align: center
   &__form
     display: flex
     flex-direction: column
   &__input
-    &--light
-      &::placeholder
-        font-style: normal
-        font-weight: normal
-        font-size: 1.285rem
-        line-height: 1.714rem
-        color: $light
+    background: transparent
+    border: none
+    border-bottom: 2px solid rgba($light, 0.65)
+    color: $light
+    &::placeholder
+      font-style: normal
+      font-weight: normal
+      line-height: 1.55rem
+      color: rgba($light, 0.65)
     &-group
       display: flex
       flex-direction: column 
-      margin-top: 2.3rem 
-      margin-bottom: 1.3rem
-  &__policy
-    margin-top: -1.3rem
-    margin-bottom: 2.7rem
+      position: relative
+      margin-top: 2rem
   &__button
-    align-self: flex-end
-    padding: 1.6rem 4.4rem
+    align-self: center
+    margin-top: 3rem
+    font-size: 1rem
+    line-height: 1.16rem
+    padding: 0.6rem 4rem
+    &:hover
+      background: transparent
+  &__success
+    &__dialog
+      position: relative
+      max-width: 27rem
+      background: $secondary 
+      padding: 2.5rem
+      color: $light
+    &__close
+      position: absolute
+      right: 0
+      top: 0
+      width: 33px
+      height: 33px
+      background: transparent url('../img/close.svg') no-repeat center
+      border: none
+      margin: 0.9rem
+      cursor: pointer
+    &__title
+      font-family: $font-title-thin
+      font-size: 1.55rem
+      font-style: normal
+      font-weight: normal
+      line-height: 1,83rem
+      text-align: center
+      margin: 0
+em
+  position: absolute
+  color: $primary
+  right: 0
+  bottom: 2px
+  font-size: 0.6rem
+
+
 
 

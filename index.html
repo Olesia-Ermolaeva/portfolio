@@ -17,7 +17,7 @@
     <ul class="menu-list">
       <li class="li menu-list__item"><a href="#avantage" class=" li menu-list__item__link">Преимущества</a></li>
       <li class="li menu-list__item"><a href="" class="li menu-list__item__link">Портфолио</a></li>
-      <li class="li menu-list__item"><a href="" class="li menu-list__item__link">Цены</a></li>
+      <li class="li menu-list__item"><a href="#price" class="li menu-list__item__link">Цены</a></li>
       <li class="li menu-list__item"><a href="" class="li menu-list__item__link">Отзывы</a></li>
     </ul>
   </nav>
@@ -31,14 +31,14 @@
       <nav class="nav header__nav">
         <a href="#avantage" class="nav__item header__nav__item">Преимущества</a>
         <a href=""  class="nav__item header__nav__item">Портфолио</a>
-        <a href=""  class="nav__item header__nav__item">Цены</a>
+        <a href="#price"  class="nav__item header__nav__item">Цены</a>
         <a href=""  class="nav__item header__nav__item">Отзывы</a>
       </nav>
       <div class="social header__social">
         <a href="https://vk.com/la_nuit_sereine">
           <img src="img/header/vk.svg" alt="vk.com">
         </a>
-        <a href="tg://resolve?domain=<la_nuit_sereine>">
+        <a href="tg://resolve?domain=la_nuit_sereine">
           <img src="img/header/telegram.svg" alt="telegram">
         </a>
 
@@ -132,7 +132,7 @@
 
     <section class="section price">
       <div class="container">
-        <h2 class="section__title price__title">Сколько это будет стоить?</h2>
+        <h2 id="price" class="section__title price__title">Сколько это будет стоить?</h2>
         <div class="section__text price__text">Цены в веб-разработке часто кусаются. Делать дорогой и громоздкий сайт нет смысла, чтобы запустить бизнес. Всё, что вам нужно на начальном этапе, - это создать посадочную страницу и выделить работника, который будет принимать заявки.</div>
         <div class="row price__row">
           <div class="col-30 price__col-30">
@@ -144,7 +144,7 @@
                 <li class="li li_circle price__li">libero quas consectetur vel, ad, commodi in voluptas delectus nostrum nemo?</li>
               </ul>
               <div class="price__tag">от 9999 руб.</div>
-              <button class="button price__button">Заказать</button>
+              <button class="button price__button" data-toggle="modal">Заказать</button>
             </div>
           </div>
           <div class="col-30 price__col-30">
@@ -159,7 +159,7 @@
               </ul>
               
               <div class="price__tag">от 9999 руб.</div>
-              <button class="button price__button">Заказать</button>
+              <button class="button price__button" data-toggle="modal">Заказать</button>
             </div>
           </div>
           <div class="col-30 price__col-30">
@@ -175,7 +175,7 @@
                 <li class="li li_circle price__li">libero quas consectetur vel, ad, commodi in voluptas delectus nostrum nemo?</li>
               </ul>
               <div class="price__tag">от 9999 руб.</div>
-              <button class="button price__button">Заказать</button>
+              <button class="button price__button" data-toggle="modal">Заказать</button>
             </div>
           </div>
         </div>
@@ -196,6 +196,36 @@
     </div>
     <!-- /.container -->
   </footer>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Остались вопросы? </h3>
+      <div class="modal__text">Оставьте заявку и я напишу или позвоню вам в течение 15 минут.</div>
+      <form action="telegram.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <input type="text" name="userName" id="modal-user-name" placeholder="Ваше имя" class="input form__input modal__input">
+        </div>
+        <div class="input-group modal__input-group">
+          <input type="tel" name="userPhone" id="modal-user-phone" placeholder="+7(900)000-00-00" class="input form__input modal__input">
+        </div>
+        <div class="input-group modal__input-group">
+          <input type="text" name="userMessage" id="modal-user-Message" placeholder="Какой сайт вам нужен?" class="input form__input modal__input">
+        </div>
+        <button class="button modal__button">Отправить заявку</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="modal__success">
+    <div class="modal__success__dialog">
+      <button class="modal__success__close"></button>
+      <div class="modal__success__title">Заявка отправлена!</div>
+    </div>
+    <!-- /.modal__succes__dialog -->
+  </div>
+  <!-- /.modal modal__succes -->
   <div class="upbutton" id="upbutton"></div>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

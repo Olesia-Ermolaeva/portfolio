@@ -48,13 +48,9 @@ $(document).ready(function () {
         minlength: 10
       },
       // правило-объект
-      userEmail: {
+      userMessage: {
         required: true,
-        email: true
-      },
-      // валидация чекбокса
-      policyCheckbox: {
-        required: true
+        minlength: 10
       }
     },
     errorElement: "em",
@@ -70,16 +66,16 @@ $(document).ready(function () {
         required: "Телефон обязателен",
         minlength: "Введите телефон полностью" 
       },
-      userEmail: {
-        required: "Обязательно укажите email",
-        email: "Введите в формате: name@domain.com"
+      userMessage: {
+        required: "Напишите что-нибудь",
+        minlength: "Напишите больше"
       },
-      policyCheckbox: "Согласитесь с обработкой данных"
+
     },
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
+        url: "telegram.php",
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
@@ -93,125 +89,9 @@ $(document).ready(function () {
     }  
   });
 
-  // валидация формы онлайн-контроль
-  $(".control__form").validate({
-    rules: {
-      // строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: {
-        required: true,
-        minlength: 10
-      },
-      // валидация чекбокса
-      policyCheckbox: {
-        required: true
-      }
-    },
-    errorElement: "ec",
-    errorClass: "invalid",
-    //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не длиннее 15 букв" 
-      }, 
-      userPhone: {
-        required: "Телефон обязателен",
-        minlength: "Введите телефон полностью" 
-      },
-      policyCheckbox: "Согласитесь с обработкой данных"
-    },  
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          $(form)[0].reset();
-          $('.modal__success').addClass('modal__success--visible');
-        },
-        error: function (response) {
-          console.error('Ошибка запроса' + response);
-        }
-      });
-    }
-  });
-
-  $("#footerForm").validate({
-    rules: {
-      // строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: {
-        required: true,
-        minlength: 10
-      },
-      userQuestion: {
-        required: true,
-        minlength: 10
-      },
-      // валидация чекбокса
-      policyCheckbox: {
-        required: true
-      }
-    },
-    errorElement: "ef",
-    errorClass: "invalid",
-    //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не длиннее 15 букв" 
-      }, 
-      userPhone: {
-        required: "Телефон обязателен",
-        minlength: "Введите телефон полностью" 
-      },
-      userQuestion: {
-        required: "Хочешь спросить - спрашивай",
-        minlength: "Напиши больше" 
-      },
-      policyCheckbox: "Согласитесь с обработкой данных"
-    },
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          $(form)[0].reset();
-          $('.modal__success').addClass('modal__success--visible');
-        },
-        error: function (response) {
-          console.error('Ошибка запроса' + response);
-        }
-      });
-    }  
-  });
-
+ 
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
-  //видеоплеер
-  var player;
-  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '465',
-      width: '100%',
-      videoId: 'RHzzLqJWqHs',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-  })
+  $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7(000)000-00-00"});
 
 });
 
