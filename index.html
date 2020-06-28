@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Разработка landing page и сайтов-визиток в Костроме. Быстро, недорого.">
   <title>Landing page в Костроме</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
 </head>
@@ -18,7 +19,7 @@
       <li class="li menu-list__item"><a href="#avantage" class=" li menu-list__item__link">Преимущества</a></li>
       <li class="li menu-list__item"><a href="" class="li menu-list__item__link">Портфолио</a></li>
       <li class="li menu-list__item"><a href="#price" class="li menu-list__item__link">Цены</a></li>
-      <li class="li menu-list__item"><a href="" class="li menu-list__item__link">Отзывы</a></li>
+      <li class="li menu-list__item"><a href="#review" class="li menu-list__item__link">Отзывы</a></li>
     </ul>
   </nav>
   <header class="header">
@@ -32,13 +33,13 @@
         <a href="#avantage" class="nav__item header__nav__item">Преимущества</a>
         <a href=""  class="nav__item header__nav__item">Портфолио</a>
         <a href="#price"  class="nav__item header__nav__item">Цены</a>
-        <a href=""  class="nav__item header__nav__item">Отзывы</a>
+        <a href="#review"  class="nav__item header__nav__item">Отзывы</a>
       </nav>
       <div class="social header__social">
-        <a href="https://vk.com/la_nuit_sereine">
+        <a href="https://vk.com/la_nuit_sereine" class="header__img">
           <img src="img/header/vk.svg" alt="vk.com">
         </a>
-        <a href="tg://resolve?domain=la_nuit_sereine">
+        <a href="tg://resolve?domain=la_nuit_sereine" class="header__img">
           <img src="img/header/telegram.svg" alt="telegram">
         </a>
 
@@ -132,7 +133,7 @@
 
     <section class="section price">
       <div class="container">
-        <h2 id="price" class="section__title price__title">Сколько это будет стоить?</h2>
+        <h2 id="price" class="section__title price__title">Сколько будет стоить?</h2>
         <div class="section__text price__text">Цены в веб-разработке часто кусаются. Делать дорогой и громоздкий сайт нет смысла, чтобы запустить бизнес. Всё, что вам нужно на начальном этапе, - это создать посадочную страницу и выделить работника, который будет принимать заявки.</div>
         <div class="row price__row">
           <div class="col-30 price__col-30">
@@ -182,7 +183,40 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="section feedback">
+    <section class="section review">
+      <div class="container">
+        <h2 class="section__title review__title" id="review">Отзывы тех, кто со мной работал</h2>
+        <div class="swiper-container review__swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="review__card">
+                <div class="row review__row">
+                  <div class="col-50 review__col-50">
+                    <img src="img/review/img_1.png" alt="фото заказчика" class="review__img">
+                
+                  </div>
+                  <div class="col-50 review__col-50"><strong class="review__strong">Александра</strong>
+                    <a href="https://vk.com/lodbrok_aleksandra" class="review__link">vk.com/lodbrok_aleksandra</a>
+                    <p class="review__p">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    </p>
+                    <a href="" class="review__link">Посмотреть этот отзыв в группе ВКонтакте</a></div>
+                </div>
+                <!-- /.row review__row -->
+              </div>
+              <!-- /.review__card -->
+            </div>
+            <!-- swiper-slide -->
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next review__swiper-button-next"></div>
+          <div class="swiper-button-prev review__swiper-button-prev"></div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section review -->
+    <section  class="section feedback">
       <div class="container">
         <h2 class="section__title feedback__title">Связаться со мной</h2>
         <div class="row">
@@ -281,10 +315,10 @@
   <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/blazy.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   
 </body>
