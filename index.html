@@ -17,7 +17,7 @@
     </div>
     <ul class="menu-list">
       <li class="li menu-list__item"><a href="#avantage" class=" li menu-list__item__link">Преимущества</a></li>
-      <li class="li menu-list__item"><a href="#project" class="li menu-list__item__link">Портфолио</a></li>
+      <li class="li menu-list__item"><a href="#projects" class="li menu-list__item__link">Портфолио</a></li>
       <li class="li menu-list__item"><a href="#price" class="li menu-list__item__link">Цены</a></li>
       <li class="li menu-list__item"><a href="#review" class="li menu-list__item__link">Отзывы</a></li>
       <li class="li menu-list__item"><a href="#contacts" class="li menu-list__item__link">Контакты</a></li>
@@ -32,7 +32,7 @@
       <!-- /.logo header__logo -->
       <nav class="nav header__nav">
         <a href="#avantage" class="nav__item header__nav__item">Преимущества</a>
-        <a href="#project"  class="nav__item header__nav__item">Портфолио</a>
+        <a href="#projects"  class="nav__item header__nav__item">Портфолио</a>
         <a href="#price"  class="nav__item header__nav__item">Цены</a>
         <a href="#review"  class="nav__item header__nav__item">Отзывы</a>
       </nav>
@@ -69,7 +69,7 @@
               </li>
               <li class="li hero__li li_check">установлю Яндекс Метрику и настрою контекстную рекламу под ваш бюджет</li>
             </ul>
-            <a href="" class="link hero__link">Смотреть работы</a>
+            <a href="#projects" class="link hero__link">Смотреть работы</a>
           </div>
           <!-- /.col-50 -->
         </div>
@@ -133,8 +133,8 @@
     </section>
     <section class="section projects">
       <div class="container">
-        <div id="project" class="section__title projects__title">Несколько моих последних работ</div>
-        <div class="swiper-container">
+        <div id="projects" class="section__title projects__title">Несколько моих последних работ</div>
+        <div class="swiper-container projects__swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide projects__swiper-slide">
               <div class="projects__card content-item">
@@ -152,8 +152,8 @@
           </div>
 
           <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="projects__swiper-button-next swiper-button-next"></div>
+          <div class="projects__swiper-button-prev swiper-button-prev"></div>
         </div>
       </div>
       <!-- /.container -->
@@ -249,7 +249,7 @@
       <div class="container">
         <h2 class="section__title feedback__title" id="contacts">Связаться со мной</h2>
         <div class="row">
-          <div class="col-50 feedback__col-50">
+          <div class="col-50 feedback__col-50 feedback__col-50-center">
             <div class="feedback__card">
               <strong class="feedback__strong">
                 Социальные сети
@@ -343,7 +343,6 @@
   <div class="upbutton" id="upbutton"></div>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/blazy.js"></script>

@@ -1,11 +1,9 @@
 .content-item{
-  background: url('../img/projects/repair/1.jpg');
+  background: url('../img/projects/repair/1.jpg') no-repeat center / cover;
   backface-visibility: hidden;
-  height: 300px;
   margin: 20px auto;
   overflow: hidden;
   position: relative;
-  width: 400px;
   .overlay{
     border-bottom: 100px solid $secondary;
     border-left: 100px solid transparent;
@@ -25,7 +23,7 @@
   }
   .corner-overlay-content{
     bottom: 15px;
-    color: #333;
+    color: $light;
     position: absolute;
     right: 15px;
     transition: (all .5s ease-out);
@@ -35,11 +33,14 @@
     transition: (all .5s ease-out);
   }
   .overlay-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     bottom: 0;
-    color: #333;
+    color: $light;
     left: 0;
     opacity: 0;
-    padding: 30px;
     position: absolute;
     right: 0;
     top: 0;
